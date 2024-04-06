@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slicing/Page/Login.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 // ignore_for_file: prefer_const_constructors
 
 class SignUp extends StatelessWidget {
@@ -26,9 +27,11 @@ class SignUp extends StatelessWidget {
           },
           child: Container(
             margin: EdgeInsets.all(15),
-            width: 15,
-            height: 15,
-            color: Colors.black,
+            child: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+              size: 21,
+            ),
           ),
         ),
       ),
@@ -71,23 +74,30 @@ class SignUp extends StatelessWidget {
 
               TextFormField(
                 decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(vertical: 4),
-                    labelText: "  User Name",
-                    labelStyle: TextStyle(
+                  contentPadding: EdgeInsets.symmetric(vertical: 4),
+                  labelText: "  User Name",
+                  labelStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
                       color: Colors.grey,
-                      fontSize: 14,
                     ),
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.grey,
-                      ),
-                    )),
+                  ),
+                  suffixIcon: Icon(
+                    Icons.person,
+                    color: Color.fromARGB(121, 158, 158, 158),
+                    size: 24,
+                  ),
+                ),
               ),
 
               SizedBox(
                 height: 15,
               ),
 
+              //email address
               TextFormField(
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.symmetric(vertical: 4),
@@ -100,6 +110,11 @@ class SignUp extends StatelessWidget {
                     borderSide: BorderSide(
                       color: Colors.grey,
                     ),
+                  ),
+                  suffixIcon: Icon(
+                    Icons.email_rounded,
+                    color: Color.fromARGB(121, 158, 158, 158),
+                    size: 24,
                   ),
                 ),
               ),
@@ -122,6 +137,11 @@ class SignUp extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
+                  suffixIcon: Icon(
+                    Icons.arrow_drop_down,
+                    color: Color.fromARGB(121, 158, 158, 158),
+                    size: 24,
+                  ),
                 ),
               ),
 
@@ -142,6 +162,11 @@ class SignUp extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
+                  suffixIcon: Icon(
+                    Icons.calendar_month_rounded,
+                    color: Color.fromARGB(121, 158, 158, 158),
+                    size: 24,
+                  ),
                 ),
               ),
 
@@ -149,6 +174,7 @@ class SignUp extends StatelessWidget {
                 height: 15,
               ),
 
+              //Phone
               TextFormField(
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.symmetric(vertical: 4),
@@ -161,6 +187,11 @@ class SignUp extends StatelessWidget {
                     borderSide: BorderSide(
                       color: Colors.grey,
                     ),
+                  ),
+                  suffixIcon: Icon(
+                    Icons.phone,
+                    color: Color.fromARGB(121, 158, 158, 158),
+                    size: 24,
                   ),
                 ),
               ),
@@ -182,6 +213,11 @@ class SignUp extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
+                  suffixIcon: Icon(
+                    Icons.password,
+                    color: Color.fromARGB(121, 158, 158, 158),
+                    size: 24,
+                  ),
                 ),
               ),
 
@@ -199,7 +235,38 @@ class SignUp extends StatelessWidget {
               ),
 
               SizedBox(
-                height: 30,
+                height: 10,
+              ),
+
+              //button sign up
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Container(
+                      width: 150,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 240, 98, 129),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Sign Up",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              SizedBox(
+                height: 20,
               ),
 
               //or continue with
@@ -223,23 +290,22 @@ class SignUp extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
+                    SvgPicture.asset(
+                      'lib/Asset/facebook.svg',
                       width: 20,
                       height: 20,
-                      color: Colors.black,
-                      margin: EdgeInsets.symmetric(horizontal: 4),
                     ),
-                    Container(
+                    SizedBox(width: 20),
+                    SvgPicture.asset(
+                      'lib/Asset/google.svg',
                       width: 20,
                       height: 20,
-                      color: Colors.black,
-                      margin: EdgeInsets.symmetric(horizontal: 4),
                     ),
-                    Container(
+                    SizedBox(width: 20),
+                    SvgPicture.asset(
+                      'lib/Asset/apple.svg',
                       width: 20,
                       height: 20,
-                      color: Colors.black,
-                      margin: EdgeInsets.symmetric(horizontal: 4),
                     ),
                   ],
                 ),

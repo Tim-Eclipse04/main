@@ -1,4 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:slicing/Page/Forget_Password.dart';
 import 'package:slicing/Page/SignUp.dart';
 // ignore_for_file: prefer_const_constructors
@@ -30,7 +33,7 @@ class _LoginState extends State<Login> {
         //body
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+            padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -39,17 +42,17 @@ class _LoginState extends State<Login> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
+                      SvgPicture.asset(
+                        'lib/Asset/Logo.svg',
                         width: 130,
                         height: 130,
-                        color: Colors.black,
                       )
                     ],
                   ),
                 ),
 
                 SizedBox(
-                  height: 60,
+                  height: 50,
                 ),
 
                 //Welcome Back
@@ -93,6 +96,11 @@ class _LoginState extends State<Login> {
                         color: Colors.grey,
                       ),
                     ),
+                    suffixIcon: Icon(
+                      Icons.email_rounded,
+                      color: Color.fromARGB(121, 158, 158, 158),
+                      size: 24,
+                    ),
                   ),
                 ),
 
@@ -113,6 +121,11 @@ class _LoginState extends State<Login> {
                       borderSide: BorderSide(
                         color: Colors.grey,
                       ),
+                    ),
+                    suffixIcon: Icon(
+                      Icons.password_rounded,
+                      color: Color.fromARGB(121, 158, 158, 158),
+                      size: 24,
                     ),
                   ),
                 ),
@@ -198,23 +211,22 @@ class _LoginState extends State<Login> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
+                      SvgPicture.asset(
+                        'lib/Asset/facebook.svg',
                         width: 20,
                         height: 20,
-                        color: Colors.black,
-                        margin: EdgeInsets.symmetric(horizontal: 4),
                       ),
-                      Container(
+                      SizedBox(width: 20),
+                      SvgPicture.asset(
+                        'lib/Asset/google.svg',
                         width: 20,
                         height: 20,
-                        color: Colors.black,
-                        margin: EdgeInsets.symmetric(horizontal: 4),
                       ),
-                      Container(
+                      SizedBox(width: 20),
+                      SvgPicture.asset(
+                        'lib/Asset/apple.svg',
                         width: 20,
                         height: 20,
-                        color: Colors.black,
-                        margin: EdgeInsets.symmetric(horizontal: 4),
                       ),
                     ],
                   ),
@@ -233,7 +245,7 @@ class _LoginState extends State<Login> {
                         "Don't have an account? ",
                         style: TextStyle(
                           fontSize: 14,
-                          color: Colors.black,
+                          color: Color(0xFF000000),
                         ),
                       ),
                       GestureDetector(
@@ -247,7 +259,7 @@ class _LoginState extends State<Login> {
                           "Sign Up",
                           style: TextStyle(
                             fontSize: 14,
-                            color: Color.fromARGB(255, 240, 98, 129),
+                            color: Color(0xFFF06281),
                           ),
                         ),
                       ),

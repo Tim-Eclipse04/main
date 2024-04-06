@@ -1,4 +1,7 @@
+// ignore_for_file: file_names, camel_case_types
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 // ignore_for_file: prefer_const_constructors
 
 class Forget_password extends StatefulWidget {
@@ -30,9 +33,11 @@ class _Forget_passwordState extends State<Forget_password> {
           },
           child: Container(
             margin: EdgeInsets.all(15),
-            width: 15,
-            height: 15,
-            color: Colors.black,
+            child: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+              size: 21,
+            ),
           ),
         ),
       ),
@@ -53,10 +58,10 @@ class _Forget_passwordState extends State<Forget_password> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
+                  SvgPicture.asset(
+                    'lib/Asset/Ilust.svg',
                     width: 180,
                     height: 200,
-                    color: Colors.black,
                   )
                 ],
               ),
@@ -124,7 +129,7 @@ class _Forget_passwordState extends State<Forget_password> {
                     ),
                     child: Center(
                       child: Text(
-                        "Log In",
+                        "Submit",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w600,
