@@ -19,4 +19,4 @@ In this project we implement some of the widget material in the 3rd mentoring, s
 - etc
 
 And also this is our UI Framework Document:
-https://drive.google.com/file/d/1xZRt4ojZWjdBcQMusyC_IOStKItQNXgD/view
+- https://drive.google.com/file/d/1xZRt4ojZWjdBcQMusyC_IOStKItQNXgD/view
