@@ -1,4 +1,6 @@
-# slicing
+# SLICING CR YOUTH TASK 3
+![Cover](https://github.com/Tim-Eclipse04/main/assets/123436716/08736195-7204-4618-9424-93f217f2155e)
+
 
 A new Flutter project.
 
