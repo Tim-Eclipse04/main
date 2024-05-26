@@ -104,7 +104,7 @@ class Homepage extends StatelessWidget {
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                              builder: (context) => Login(),
+                                              builder: (context) => Pantauin(),
                                             ),
                                           );
                                         },
@@ -159,7 +159,7 @@ class Homepage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Signup(),
+                              builder: (context) => Pantauin(),
                             ),
                           );
                         }),
@@ -168,7 +168,7 @@ class Homepage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Login(),
+                              builder: (context) => Bibitin(),
                             ),
                           );
                         }),
@@ -177,7 +177,7 @@ class Homepage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Signup(),
+                              builder: (context) => Infoin(),
                             ),
                           );
                         }),
@@ -225,7 +225,7 @@ class Homepage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => Login(),
+                                builder: (context) => Bibitin(),
                               ),
                             );
                           },
@@ -240,10 +240,55 @@ class Homepage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 15,
+                    SizedBox(height: 15),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Artikel Terkait',
+                              style: GoogleFonts.outfit(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              'Informasi lengkap tentang tanaman',
+                              style: GoogleFonts.outfit(
+                                fontSize: 12,
+                                fontWeight: FontWeight.normal,
+                                color: iconTcolor,
+                              ),
+                            ),
+                          ],
+                        ),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Infoin(),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            'Lihat Semua',
+                            style: GoogleFonts.outfit(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: primaryGreen,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    Stack()
                   ],
                 );
               },

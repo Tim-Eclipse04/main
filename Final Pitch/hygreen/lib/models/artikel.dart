@@ -1,7 +1,7 @@
 class Artikel {
-  String thumbnail;
-  String judul;
-  int time;
+  final String thumbnail;
+  final String judul;
+  final String time;
 
   Artikel({
     required this.thumbnail,
@@ -10,15 +10,15 @@ class Artikel {
   });
 }
 
-Set<Artikel> artikelList = {
+List<Artikel> artikelList = [
   Artikel(
-    thumbnail: "asset/images/artikel/pertama.png",
+    thumbnail: "asset/image/pertama.png",
     judul: "Pertaninan pintar jadi solusi jitu atasi krisis petani",
-    time: 1,
+    time: "1",
   ),
   Artikel(
-    thumbnail: "asset/images/artikel/kedua.png",
+    thumbnail: "asset/image/kedua.png",
     judul: "Mengembangkan Pertanian Organik",
-    time: 5,
+    time: "5",
   ),
-};
+];
